@@ -1,0 +1,61 @@
+.av-picker{position:relative;min-width:0;width:100%;font-family:Inter,Arial,sans-serif}
+.av-picker button,.av-calendar button,.av-admin button{font:inherit;cursor:pointer;touch-action:manipulation}
+.av-picker .av-date-open{width:100%;min-height:48px;padding:12px;text-align:left;background:transparent;color:inherit;border:1px solid currentColor;border-radius:0;font-size:16px}
+.av-picker #av-customer-calendar{position:relative;margin-top:8px;max-width:100%;background:#111;color:#fff;border:1px solid #555;padding:10px;box-sizing:border-box}
+.av-calendar{width:100%;box-sizing:border-box;color:#fff;background:#111;font:14px Inter,Arial,sans-serif}
+.av-month-nav{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:16px}
+.av-month-nav h3{margin:0;font:700 17px Inter,Arial,sans-serif;letter-spacing:0;text-align:center}
+.av-month-nav button,.av-clear,.av-retry{background:#202020;color:#fff;border:1px solid #555;padding:10px;min-height:44px}
+.av-week,.av-days{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:4px;text-align:center}
+.av-week{color:#aaa;margin-bottom:8px;font-size:12px}
+.av-days .av-day{min-width:0;min-height:40px;padding:4px;background:#242424;color:#fff;border:1px solid transparent;font-size:14px;border-radius:3px}
+.av-days .av-day.av-blocked{background:#371d20;color:#ffa9ae;text-decoration:line-through;border-color:#613038}
+.av-days .av-day.av-selected{border:2px solid #e1ba5d;background:#473919;color:#fff}
+.av-days .av-day:disabled{cursor:not-allowed;opacity:.5}
+.av-days .av-day.av-blocked:disabled{opacity:.85}
+.av-calendar .av-cal-status{font-size:12px;line-height:1.5;color:#ccc;margin:14px 0 4px}
+.av-picker .av-validation{font:14px/1.5 Inter,Arial,sans-serif;color:inherit;margin:8px 0 0}
+.av-picker .av-validation:empty{display:none}
+.av-picker [hidden],.av-admin [hidden]{display:none!important}
+.av-picker button:focus-visible,.av-admin button:focus-visible,.av-admin input:focus-visible{outline:2px solid #e1ba5d;outline-offset:3px}
+.av-admin{margin:0;background:#080808;color:#fff;font:16px/1.5 Inter,Arial,sans-serif}
+.av-admin *{box-sizing:border-box}
+.av-admin main{width:min(100% - 32px,570px);margin:32px auto 60px}
+.av-admin header{display:flex;align-items:center;justify-content:space-between;gap:12px;border-bottom:1px solid #333;padding-bottom:22px}
+.av-admin header img{width:95px;height:auto}
+.av-admin header a{color:#ddd;font-size:13px}
+.av-admin h1{font-family:Anton,Impact,sans-serif;font-weight:400;text-transform:uppercase;font-size:clamp(34px,8vw,48px);line-height:1.1;margin:30px 0 14px}
+.av-admin p{color:#bbb}
+.av-admin label{display:block;margin:18px 0}
+.av-admin input{width:100%;font:16px Inter,Arial,sans-serif;color:white;background:#161616;border:1px solid #666;min-height:48px;padding:12px;margin-top:6px}
+.av-admin button{min-height:46px;background:white;color:#090909;border:1px solid white;padding:10px 16px;font-weight:700}
+.av-admin button:disabled{opacity:.5;cursor:wait}
+.av-admin .av-calendar{padding:20px;border:1px solid #333;margin:24px 0}
+.av-admin .av-days .av-day{min-height:46px;padding:4px}
+.av-admin .av-month-nav button{padding:8px 12px;background:#222;color:#fff}
+.av-admin .av-week{margin-bottom:10px}
+.av-admin .av-actions{display:flex;gap:12px;flex-wrap:wrap}
+.av-admin #selection{border-left:3px solid #e1ba5d;padding:0 0 0 18px;margin:24px 0}
+.av-admin #selection h2{font-size:20px}
+.av-admin #feedback{color:#f0d184;min-height:24px}
+.av-admin .av-muted{background:transparent;color:white;border:1px solid #666}
+.av-admin small{color:#aaa;display:block;margin:20px 0}
+@media(max-width:380px){.av-admin .av-calendar{padding:10px}.av-admin .av-days .av-day{min-height:40px}.av-month-nav h3{font-size:15px}}
+
+/* Keep the site's generic booking-button rules out of the calendar. */
+.booking-form .av-days .av-day{justify-self:stretch;width:100%;background:#242424;color:#fff;border:1px solid transparent}
+.booking-form .av-days .av-day.av-blocked{background:#371d20;color:#ffa9ae;border-color:#613038}
+.booking-form .av-days .av-day.av-selected{background:#473919;border:2px solid #e1ba5d}
+.booking-form .av-days .av-day:not(:disabled):hover{background:#444;color:#fff}
+.booking-form .av-month-nav button,.booking-form .av-clear,.booking-form .av-retry{background:#202020;color:#fff;border:1px solid #555}
+.booking-form .av-date-open{background:#fff;color:#111;border:1px solid #bbb}
+.booking-form .event-date-field input[type="hidden"]{display:none!important}
+
+.booking-form:has(.av-picker){align-items:start}
+
+
+.footer .footer-meta .infl8-staff-login{color:#777;font:inherit;letter-spacing:inherit;text-decoration:none;padding:12px 0;min-height:44px;display:inline-flex;align-items:center;border:0;background:transparent}
+.footer .footer-meta .infl8-staff-login:hover{color:#fff}
+.footer .footer-meta .infl8-staff-login:focus-visible{outline:2px solid #aaa;outline-offset:4px}
+.footer .footer-meta{display:grid;grid-template-columns:1fr auto auto 1fr;align-items:center}
+@media(max-width:760px){.footer .footer-meta{display:flex;flex-direction:column;align-items:center;gap:8px}}

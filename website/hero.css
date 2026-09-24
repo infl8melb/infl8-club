@@ -1,0 +1,21 @@
+/* Keep the portrait photo and its tent logo clear of the headline. */
+.hero{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);align-items:center;min-height:0;padding-top:130px;background:#070707}
+/* Trim the top 240px of sky, leaving a little room above the centre tree. */
+.hero-media{position:relative;inset:auto;grid-column:2;grid-row:1;width:100%;height:auto;aspect-ratio:1086/1208;overflow:hidden}
+.hero-media img{position:absolute;inset:auto 0 0;width:100%;height:auto;object-fit:contain;filter:none}
+.hero-media::after{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(90deg,#070707,transparent 12%),linear-gradient(0deg,#070707,transparent 12%)}
+.hero-overlay{display:none}
+.hero-content{grid-column:1;grid-row:1;max-width:none;padding:65px 3vw 80px 5vw}
+.hero h1{font-size:clamp(64px,7.8vw,125px)}
+.hero-copy{font-size:clamp(16px,1.45vw,21px);max-width:510px}
+.hero-actions{flex-wrap:wrap;gap:22px}
+.scroll-mark{display:none}
+@media(max-width:850px){
+  .hero{display:flex;flex-direction:column;align-items:stretch;padding-top:118px}
+  .hero-media{width:100%;height:auto}
+  .hero-media img{width:100%;height:auto}
+  .hero-media::after{background:linear-gradient(0deg,#070707,transparent 18%)}
+  .hero-content{padding:24px 6vw 64px}
+  .hero h1{font-size:19vw}
+  .hero-copy{font-size:17px;margin:24px 0}
+}

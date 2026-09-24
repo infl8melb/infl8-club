@@ -1,0 +1,35 @@
+.site-header .btn-small{font-family:Anton,Impact,sans-serif;font-size:16px;font-weight:400;letter-spacing:.04em}
+.club-colour-text{display:inline-block;color:#7536ff}
+@supports ((background-clip:text) or (-webkit-background-clip:text)){
+  .club-colour-text{background:linear-gradient(110deg,#7524c9 0%,#e723be 22%,#7536ff 45%,#009dce 65%,#a43ae4 82%,#7524c9 100%);background-size:250% 100%;background-clip:text;-webkit-background-clip:text;color:transparent;animation:club-text-sweep 5s ease-in-out infinite alternate,club-text-pulse 2.4s ease-in-out infinite}
+}
+@keyframes club-text-sweep{from{background-position:0% 50%}to{background-position:100% 50%}}
+@keyframes club-text-pulse{0%,100%{filter:brightness(.9)}12%{filter:brightness(1.2)}38%,70%{filter:brightness(1)}}
+@media(prefers-reduced-motion:reduce){.club-colour-text{animation:none}}
+.nav{font-family:Anton,Impact,sans-serif;font-size:16px;font-weight:400;letter-spacing:.04em}
+.requirements h2,.requirements h2 em{color:#000;-webkit-text-stroke:0}
+.cards{grid-template-columns:repeat(2,minmax(0,1fr));max-width:828px;margin-inline:auto}
+@media(max-width:850px){.cards{grid-template-columns:minmax(0,1fr)}}
+.promo-banner{position:fixed;inset:0 0 auto;z-index:60;height:52px;display:flex;background:#100820;color:#070707;border-bottom:1px solid #4a276b;overflow:hidden;isolation:isolate}
+.promo-banner::before,.promo-banner::after{content:"";position:absolute;inset:-45px -20%;z-index:-1;pointer-events:none}
+.promo-banner::before{background:radial-gradient(ellipse at 15% 60%,rgba(244,35,204,.85),transparent 30%),radial-gradient(ellipse at 55% 35%,rgba(117,54,255,.85),transparent 35%),radial-gradient(ellipse at 85% 65%,rgba(0,185,255,.8),transparent 30%);animation:club-glow 6s ease-in-out infinite alternate}
+.promo-banner::after{background:linear-gradient(110deg,transparent 16%,rgba(36,196,255,.18) 19%,rgba(36,196,255,.95) 21%,transparent 28%),linear-gradient(70deg,transparent 46%,rgba(231,61,239,.9) 52%,transparent 60%),linear-gradient(120deg,transparent 73%,rgba(152,107,255,.95) 79%,transparent 86%);animation:club-beams 5s ease-in-out infinite alternate,club-beat 2.4s ease-in-out infinite;opacity:.4}
+@keyframes club-glow{from{transform:translateX(-6%);opacity:.6}to{transform:translateX(6%);opacity:.95}}
+@keyframes club-beams{from{transform:translateX(12%) skewX(-12deg)}to{transform:translateX(-12%) skewX(12deg)}}
+@keyframes club-beat{0%,100%{opacity:.25}12%{opacity:.95}38%{opacity:.4}70%{opacity:.25}}
+.promo-window{flex:1;min-width:0;overflow:hidden;display:flex;align-items:center}
+.promo-track{display:flex;width:max-content;flex-shrink:0;animation:promo-scroll 28s linear infinite}
+.promo-group{display:flex;flex-shrink:0;align-items:center;justify-content:space-around;gap:32px;min-width:100vw;padding-right:32px;white-space:nowrap;font-family:Anton,Impact,sans-serif;font-size:15px;font-weight:400;letter-spacing:.04em}
+.promo-group span{display:inline-flex;align-items:center;padding:5px 0;line-height:1.3;color:#fff;text-shadow:0 1px 4px rgba(0,0,0,.9)}
+.promo-group b{display:inline-flex;align-items:center;justify-content:center;flex-shrink:0;width:30px;height:30px;font-size:27px;line-height:1;letter-spacing:0;font-family:"Apple Color Emoji","Segoe UI Emoji","Noto Color Emoji",sans-serif;font-weight:400;transform-origin:center;animation:disco-spin 6s linear infinite}
+@keyframes disco-spin{to{transform:rotate(360deg)}}
+.promo-banner:hover .promo-group b,.promo-banner:focus-within .promo-group b,.promo-banner.is-paused .promo-group b{animation-play-state:paused}
+.promo-banner:hover .promo-track,.promo-banner:focus-within .promo-track,.promo-banner.is-paused .promo-track{animation-play-state:paused}
+.promo-banner:hover::before,.promo-banner:hover::after,.promo-banner:focus-within::before,.promo-banner:focus-within::after,.promo-banner.is-paused::before,.promo-banner.is-paused::after{animation-play-state:paused}
+.promo-window:focus-visible{outline:2px solid #fff;outline-offset:-4px}
+.site-header{top:52px}
+.hero-content{padding-top:202px}
+html{scroll-padding-top:144px}
+@keyframes promo-scroll{to{transform:translateX(-50%)}}
+@media(max-width:850px){.hero-content{padding-top:182px}.promo-group{gap:24px;padding-right:24px;font-size:14px}}
+@media(prefers-reduced-motion:reduce){.promo-track,.promo-group b,.promo-banner::before,.promo-banner::after{animation:none}.promo-window{overflow-x:auto}html{scroll-behavior:auto}}
