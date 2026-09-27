@@ -1187,17 +1187,11 @@
         </details>
 
         <details>
-          <summary>Do you accept Afterpay?</summary>
-          <p>Simple answer, we sure do!</p>
-        </details>
-
-        <details>
           <summary>Do you require a deposit?</summary>
           <p>
             Yes. To finalise your booking, a $100 deposit will be required.
             The remaining payment will be required 7 days prior to your
-            event date. For our customers using Afterpay, full upfront
-            payment will be required.
+            event date.
           </p>
         </details>
 
@@ -1284,7 +1278,6 @@
     <div class="footer-meta">
       <a href="#top">Back to top ↑</a>
       <span class="footer-location">Melbourne, Australia 🇦🇺</span>
-      <a class="infl8-staff-login" href="/availability/">Staff Login</a>
       <span>© 2026 INFL8 CLUB</span>
     </div>
   </footer>
@@ -2002,7 +1995,7 @@
         abn.id = "footer-abn";
       }
 
-      abn.textContent = "ABN: 89 989 524 241";
+      abn.textContent = "ABN: 88 312 443 016";
       footer.insertBefore(abn, footerMeta);
     }
 
@@ -2229,7 +2222,7 @@
       });
     }
 
-    // Five banner messages, appearing individually.
+    // Four banner messages, appearing individually.
     const track = document.querySelector(".promo-track");
 
     if (track) {
@@ -2237,8 +2230,7 @@
         "MELBOURNE'S MOST AFFORDABLE PORTABLE CLUB + DJ PACKAGE",
         "BOOK NOW",
         "DJ Included, no add-ons!",
-        "YOUR BACKYARD, OUR CLUB.",
-        "AFTERPAY AVAILABLE ✅"
+        "YOUR BACKYARD, OUR CLUB."
       ];
 
       track.replaceChildren(...messages.map((message, index) => {
@@ -2259,11 +2251,11 @@
 
 <style>
   .promo-banner .promo-track .promo-group {
-    animation: infl8FiveMessages 20s linear infinite !important;
+    animation: infl8FourMessages 16s linear infinite !important;
     animation-delay: var(--message-delay) !important;
   }
 
-  @keyframes infl8FiveMessages {
+  @keyframes infl8FourMessages {
     0% { opacity: 0; }
     2.5%, 17.5% { opacity: 1; }
     20%, 100% { opacity: 0; }
@@ -3166,8 +3158,7 @@
   const targets = {
     "#experience": "#experience .eyebrow",
     "#how": "#how .eyebrow",
-    "#faq": "#faq .eyebrow",
-    "#space-visualiser": "#space-visualiser"
+    "#faq": "#faq .eyebrow"
   };
 
   document.addEventListener("click", (event) => {
@@ -3428,6 +3419,7 @@
   }
 
   #enquiry-status[data-state="success"] {
+    color: #000;
     border-color: #67d99b;
     background: rgba(40, 160, 95, .15);
   }
@@ -3543,7 +3535,7 @@
 
     const body = new URLSearchParams({
       "form-name": "infl8-enquiries",
-      "subject": "You've got an enquiry! - Ref: " + value("name") + " - " + Date.now(),
+      "subject": "You've got an enquiry!",
       "Name": value("name"),
       "email": value("email"),
       "Event-date": formatDate(value("date")),
@@ -3757,7 +3749,6 @@
     <a href="#experience">THE EXPERIENCE</a>
     <a href="#how">HOW IT WORKS</a>
     <a href="#packages">PACKAGES</a>
-    <a href="#space-visualiser">WILL IT FIT?</a>
     <a href="#faq">FAQ</a>
     <a href="#book">BOOK NOW</a>
   `;
@@ -3913,12 +3904,5 @@
     photoLocation.textContent = "📍 Melbourne, Australia";
   }
 </script>
-<style>
-  #enquiry-status[data-state="success"] {
-    color: #000 !important;
-  }
-</style>
 </body>
 </html>
-<link rel="stylesheet" href="/availability/calendar.css">
-<script type="module" src="/availability/public.js"></script>
