@@ -583,6 +583,14 @@
       <i>*</i>
     </div>
 
+    <div class="club-video-section" aria-label="Inside the INFL8 Club">
+      <div class="club-video-frame">
+        <video class="club-video" autoplay muted loop playsinline preload="metadata" aria-label="INFL8 Club lighting and atmosphere">
+          <source src="assets/infl8-club-loop.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
+
     <section id="experience" class="section split without-number">
       <div class="section-body">
         <p class="eyebrow">THE EXPERIENCE</p>
@@ -3908,5 +3916,26 @@
     photoLocation.textContent = "📍 Melbourne, Australia";
   }
 </script>
+<style>
+  /* Match the hero photograph's fade into the page background. */
+  .club-video-section { background: transparent; padding: 48px 20px 0; }
+  .club-video-frame { position: relative; width: min(100%, 440px); margin: 0 auto; overflow: hidden; background: transparent; border: 0; box-shadow: none; }
+  .club-video {
+    display: block; width: 100%; height: auto; aspect-ratio: 9 / 16; object-fit: contain;
+    border: 0; outline: 0; box-shadow: none; filter: none; opacity: 1; background: #070707;
+    -webkit-mask-image: linear-gradient(to right, rgba(0,0,0,0) 0.0%, rgba(0,0,0,0) 0.833%, rgba(0,0,0,0.01) 1.667%, rgba(0,0,0,0.025) 2.5%, rgba(0,0,0,0.055) 3.333%, rgba(0,0,0,0.1) 4.167%, rgba(0,0,0,0.17) 5.0%, rgba(0,0,0,0.26) 5.833%, rgba(0,0,0,0.37) 6.667%, rgba(0,0,0,0.5) 7.5%, rgba(0,0,0,0.63) 8.333%, rgba(0,0,0,0.74) 9.167%, rgba(0,0,0,0.83) 10.0%, rgba(0,0,0,0.9) 10.833%, rgba(0,0,0,0.945) 11.667%, rgba(0,0,0,0.975) 12.5%, rgba(0,0,0,0.99) 13.333%, rgba(0,0,0,1) 14.167%, rgba(0,0,0,1) 15.0%, rgba(0,0,0,1) 85.0%, rgba(0,0,0,1) 85.833%, rgba(0,0,0,0.99) 86.667%, rgba(0,0,0,0.975) 87.5%, rgba(0,0,0,0.945) 88.333%, rgba(0,0,0,0.9) 89.167%, rgba(0,0,0,0.83) 90.0%, rgba(0,0,0,0.74) 90.833%, rgba(0,0,0,0.63) 91.667%, rgba(0,0,0,0.5) 92.5%, rgba(0,0,0,0.37) 93.333%, rgba(0,0,0,0.26) 94.167%, rgba(0,0,0,0.17) 95.0%, rgba(0,0,0,0.1) 95.833%, rgba(0,0,0,0.055) 96.667%, rgba(0,0,0,0.025) 97.5%, rgba(0,0,0,0.01) 98.333%, rgba(0,0,0,0) 99.167%, rgba(0,0,0,0) 100.0%), linear-gradient(to bottom, rgba(0,0,0,0) 0.0%, rgba(0,0,0,0) 0.583%, rgba(0,0,0,0.01) 1.167%, rgba(0,0,0,0.025) 1.75%, rgba(0,0,0,0.055) 2.333%, rgba(0,0,0,0.1) 2.917%, rgba(0,0,0,0.17) 3.5%, rgba(0,0,0,0.26) 4.083%, rgba(0,0,0,0.37) 4.667%, rgba(0,0,0,0.5) 5.25%, rgba(0,0,0,0.63) 5.833%, rgba(0,0,0,0.74) 6.417%, rgba(0,0,0,0.83) 7.0%, rgba(0,0,0,0.9) 7.583%, rgba(0,0,0,0.945) 8.167%, rgba(0,0,0,0.975) 8.75%, rgba(0,0,0,0.99) 9.333%, rgba(0,0,0,1) 9.917%, rgba(0,0,0,1) 10.5%, rgba(0,0,0,1) 89.5%, rgba(0,0,0,1) 90.083%, rgba(0,0,0,0.99) 90.667%, rgba(0,0,0,0.975) 91.25%, rgba(0,0,0,0.945) 91.833%, rgba(0,0,0,0.9) 92.417%, rgba(0,0,0,0.83) 93.0%, rgba(0,0,0,0.74) 93.583%, rgba(0,0,0,0.63) 94.167%, rgba(0,0,0,0.5) 94.75%, rgba(0,0,0,0.37) 95.333%, rgba(0,0,0,0.26) 95.917%, rgba(0,0,0,0.17) 96.5%, rgba(0,0,0,0.1) 97.083%, rgba(0,0,0,0.055) 97.667%, rgba(0,0,0,0.025) 98.25%, rgba(0,0,0,0.01) 98.833%, rgba(0,0,0,0) 99.417%, rgba(0,0,0,0) 100.0%);
+    -webkit-mask-composite: source-in;
+    mask-image: linear-gradient(to right, rgba(0,0,0,0) 0.0%, rgba(0,0,0,0) 0.833%, rgba(0,0,0,0.01) 1.667%, rgba(0,0,0,0.025) 2.5%, rgba(0,0,0,0.055) 3.333%, rgba(0,0,0,0.1) 4.167%, rgba(0,0,0,0.17) 5.0%, rgba(0,0,0,0.26) 5.833%, rgba(0,0,0,0.37) 6.667%, rgba(0,0,0,0.5) 7.5%, rgba(0,0,0,0.63) 8.333%, rgba(0,0,0,0.74) 9.167%, rgba(0,0,0,0.83) 10.0%, rgba(0,0,0,0.9) 10.833%, rgba(0,0,0,0.945) 11.667%, rgba(0,0,0,0.975) 12.5%, rgba(0,0,0,0.99) 13.333%, rgba(0,0,0,1) 14.167%, rgba(0,0,0,1) 15.0%, rgba(0,0,0,1) 85.0%, rgba(0,0,0,1) 85.833%, rgba(0,0,0,0.99) 86.667%, rgba(0,0,0,0.975) 87.5%, rgba(0,0,0,0.945) 88.333%, rgba(0,0,0,0.9) 89.167%, rgba(0,0,0,0.83) 90.0%, rgba(0,0,0,0.74) 90.833%, rgba(0,0,0,0.63) 91.667%, rgba(0,0,0,0.5) 92.5%, rgba(0,0,0,0.37) 93.333%, rgba(0,0,0,0.26) 94.167%, rgba(0,0,0,0.17) 95.0%, rgba(0,0,0,0.1) 95.833%, rgba(0,0,0,0.055) 96.667%, rgba(0,0,0,0.025) 97.5%, rgba(0,0,0,0.01) 98.333%, rgba(0,0,0,0) 99.167%, rgba(0,0,0,0) 100.0%), linear-gradient(to bottom, rgba(0,0,0,0) 0.0%, rgba(0,0,0,0) 0.583%, rgba(0,0,0,0.01) 1.167%, rgba(0,0,0,0.025) 1.75%, rgba(0,0,0,0.055) 2.333%, rgba(0,0,0,0.1) 2.917%, rgba(0,0,0,0.17) 3.5%, rgba(0,0,0,0.26) 4.083%, rgba(0,0,0,0.37) 4.667%, rgba(0,0,0,0.5) 5.25%, rgba(0,0,0,0.63) 5.833%, rgba(0,0,0,0.74) 6.417%, rgba(0,0,0,0.83) 7.0%, rgba(0,0,0,0.9) 7.583%, rgba(0,0,0,0.945) 8.167%, rgba(0,0,0,0.975) 8.75%, rgba(0,0,0,0.99) 9.333%, rgba(0,0,0,1) 9.917%, rgba(0,0,0,1) 10.5%, rgba(0,0,0,1) 89.5%, rgba(0,0,0,1) 90.083%, rgba(0,0,0,0.99) 90.667%, rgba(0,0,0,0.975) 91.25%, rgba(0,0,0,0.945) 91.833%, rgba(0,0,0,0.9) 92.417%, rgba(0,0,0,0.83) 93.0%, rgba(0,0,0,0.74) 93.583%, rgba(0,0,0,0.63) 94.167%, rgba(0,0,0,0.5) 94.75%, rgba(0,0,0,0.37) 95.333%, rgba(0,0,0,0.26) 95.917%, rgba(0,0,0,0.17) 96.5%, rgba(0,0,0,0.1) 97.083%, rgba(0,0,0,0.055) 97.667%, rgba(0,0,0,0.025) 98.25%, rgba(0,0,0,0.01) 98.833%, rgba(0,0,0,0) 99.417%, rgba(0,0,0,0) 100.0%);
+    mask-composite: intersect;
+    -webkit-mask-repeat: no-repeat; mask-repeat: no-repeat;
+  }
+  @media (min-width: 761px) {
+    .footer .footer-meta > :last-child { grid-column: 1 / -1; justify-self: center; text-align: center; }
+  }
+  @media (max-width: 760px) {
+    .club-video-section { padding: 28px 12px 0; }
+    .club-video-frame { max-width: 380px; }
+  }
+</style>
 </body>
 </html>
