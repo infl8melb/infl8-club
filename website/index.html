@@ -689,6 +689,7 @@
 
           <h3>3 HOURS</h3>
           <div class="price price-sale" aria-label="Regular price $649, now $599"><s class="price-original" aria-hidden="true">$649</s> <span aria-hidden="true">$599</span></div>
+          <p class="price-offer">Introductory offer</p>
 
           <ul>
             <li>DJ with Pioneer equipment</li>
@@ -1933,9 +1934,32 @@
   }
 
   #packages .price-original {
+    position: relative;
+    display: inline-block;
     color: #aaa;
     font-size: .65em;
-    text-decoration-thickness: 2px;
+    text-decoration: none;
+  }
+
+  #packages .price-original::after {
+    content: "";
+    position: absolute;
+    left: -3px;
+    right: -3px;
+    top: 50%;
+    height: 3px;
+    background: #fff;
+    transform: rotate(-8deg);
+    pointer-events: none;
+  }
+
+  #packages .price-offer {
+    margin: 7px 0 0;
+    color: #bbb;
+    font-family: Inter, sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1.5;
   }
 
   @media (min-width: 761px) and (max-width: 1050px) {
