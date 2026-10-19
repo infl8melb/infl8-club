@@ -1954,12 +1954,35 @@
   }
 
   #packages .price-offer {
-    margin: 7px 0 0;
-    color: #bbb;
+    align-self: flex-start;
+    display: inline-block;
+    margin: 10px 0 0;
+    padding: 5px 10px;
+    border: 1px solid rgba(218, 199, 255, .45);
+    border-radius: 999px;
+    background: linear-gradient(110deg, #211b2d 20%, #4c3767 45%, #211b2d 70%);
+    background-size: 250% 100%;
+    color: #f1e8ff;
     font-family: Inter, sans-serif;
     font-size: 12px;
-    font-weight: 500;
+    font-weight: 600;
     line-height: 1.5;
+    animation: infl8OfferShimmer 5s ease-in-out infinite;
+  }
+
+  @keyframes infl8OfferShimmer {
+    0%, 100% {
+      background-position: 100% 50%;
+      box-shadow: 0 0 0 rgba(181, 132, 255, 0);
+    }
+    50% {
+      background-position: 0% 50%;
+      box-shadow: 0 0 12px rgba(181, 132, 255, .25);
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    #packages .price-offer { animation: none; }
   }
 
   @media (min-width: 761px) and (max-width: 1050px) {
