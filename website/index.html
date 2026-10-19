@@ -682,6 +682,28 @@
       </div>
 
       <div class="cards">
+        <article class="card">
+          <div class="card-top">
+            <span>INFL8 SILVER PACKAGE</span>
+          </div>
+
+          <h3>3 HOURS</h3>
+          <div class="price price-sale" aria-label="Regular price $649, now $599"><s class="price-original" aria-hidden="true">$649</s> <span aria-hidden="true">$599</span></div>
+
+          <ul>
+            <li>DJ with Pioneer equipment</li>
+            <li>Inflatable nightclub</li>
+            <li>Club lighting</li>
+            <li>Premium LD sound system</li>
+            <li>Smoke machine</li>
+            <li>V.I.P red carpet entry</li>
+            <li>3 hours of party time</li>
+            <li>Setup &amp; pack up</li>
+          </ul>
+
+          <a class="btn" href="#book" data-package="3 Hours">ENQUIRE</a>
+        </article>
+
         <article class="card featured">
           <span class="popular-ribbon">MOST POPULAR</span>
 
@@ -1263,6 +1285,7 @@
 
           <select name="package" aria-label="Package">
             <option value="">Package</option>
+            <option value="3 Hours">INFL8 Silver — 3 Hours — $599</option>
             <option value="4 Hours">INFL8 Gold — 4 Hours — $749</option>
             <option value="5 Hours">INFL8 Diamond — 5 Hours — $849</option>
             <option value="Not sure yet">Not sure yet</option>
@@ -1832,10 +1855,10 @@
   })();
 </script>
 <style>
-  /* Align both pricing packages. */
+  /* Align all three pricing packages. */
   #packages .cards {
     display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     align-items: stretch;
   }
 
@@ -1886,6 +1909,7 @@
   }
 
   /* Animated colour inside the package names. */
+  #packages .card-top .package-silver,
   #packages .card-top .package-gold,
   #packages .card-top .package-diamond {
     display: inline-block;
@@ -1895,6 +1919,29 @@
     color: transparent;
     -webkit-text-fill-color: transparent;
     animation: infl8PackageShimmer 6s ease-in-out infinite;
+  }
+
+  #packages .card-top .package-silver {
+    background-image: linear-gradient(110deg, #969da6, #d7dce2, #ffffff, #bbc2ca, #969da6);
+  }
+
+  #packages .cards .card .price-sale {
+    display: flex;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  #packages .price-original {
+    color: #aaa;
+    font-size: .65em;
+    text-decoration-thickness: 2px;
+  }
+
+  @media (min-width: 761px) and (max-width: 1050px) {
+    #packages .cards .card { padding: 24px 18px; }
+    #packages .cards .card .card-top span { font-size: 15px; letter-spacing: .04em; }
+    #packages .cards .card h3 { font-size: 44px; }
   }
 
   #packages .card-top .package-gold {
@@ -1968,7 +2015,8 @@
   }
 
   @media (prefers-reduced-motion: reduce) {
-    #packages .card-top .package-gold,
+    #packages .card-top .package-silver,
+  #packages .card-top .package-gold,
     #packages .card-top .package-diamond {
       animation: none;
     }
@@ -2018,6 +2066,7 @@
 
       const text = name.textContent.toUpperCase();
 
+      name.classList.toggle("package-silver", text.includes("SILVER"));
       name.classList.toggle("package-gold", text.includes("GOLD"));
       name.classList.toggle("package-diamond", text.includes("DIAMOND"));
     });
